@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import styles from "./styles";
+import AuthBtn from "../../ui/AuthBtn/AuthBtn";
+import LinkBtn from "../../ui/LinkBtn/LinkBtn";
 
 export default function SignupForm({ onClose, onSwitch }) {
 	const [name, setName] = useState("");
@@ -38,13 +40,21 @@ export default function SignupForm({ onClose, onSwitch }) {
 				placeholderTextColor={"#626262"}
 			/>
 
-			<TouchableOpacity style={styles.primaryBtn}>
-				<Text style={styles.primaryText}>Sign Up</Text>
-			</TouchableOpacity>
+			<AuthBtn>Signup</AuthBtn>
 
-			<TouchableOpacity onPress={onSwitch} style={styles.switchRow}>
-				<Text style={styles.switchText}>Already have an account? Login</Text>
-			</TouchableOpacity>
+			<LinkBtn>
+				<Text>
+					Already have an account?
+					<Text
+						style={{
+							fontWeight: "900",
+							color: "#298693",
+						}}
+					>
+						Login
+					</Text>
+				</Text>
+			</LinkBtn>
 		</View>
 	);
 }

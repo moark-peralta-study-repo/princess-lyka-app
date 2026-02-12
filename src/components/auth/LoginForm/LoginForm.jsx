@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import styles from "./styles";
+import AuthBtn from "../../ui/AuthBtn/AuthBtn";
 
 export default function LoginForm({ onClose, onSwitch }) {
 	return (
@@ -10,8 +11,6 @@ export default function LoginForm({ onClose, onSwitch }) {
 					<Text style={styles.close}>✕</Text>
 				</TouchableOpacity>
 			</View>
-
-			<Text style={styles.sub}>Welcome back you’ve been missed!</Text>
 
 			<TextInput
 				placeholder="Email"
@@ -25,9 +24,11 @@ export default function LoginForm({ onClose, onSwitch }) {
 				placeholderTextColor={"#626262"}
 			/>
 
-			<TouchableOpacity style={styles.primaryBtn}>
-				<Text style={styles.primaryText}>Log In</Text>
+			<TouchableOpacity style={styles.forgotWrapper}>
+				<Text style={styles.forgotText}>Forgot password?</Text>
 			</TouchableOpacity>
+
+			<AuthBtn>Login</AuthBtn>
 
 			<TouchableOpacity onPress={onSwitch} style={styles.switchRow}>
 				<Text style={styles.switchText}>Create new account</Text>

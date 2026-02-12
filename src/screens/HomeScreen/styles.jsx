@@ -50,6 +50,8 @@ export default StyleSheet.create({
 		borderRadius: 12,
 		backgroundColor: "#6b5b3d",
 		alignItems: "center",
+		borderWidth: 1,
+		borderColor: "#000000",
 	},
 
 	btnBlue: {

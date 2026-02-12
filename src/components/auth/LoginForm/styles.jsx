@@ -24,12 +24,35 @@ export default StyleSheet.create({
 	primaryBtn: {
 		marginTop: 12,
 		paddingVertical: 12,
-		borderRadius: 10,
+		borderRadius: 8,
 		backgroundColor: "#6b5b3d",
 		alignItems: "center",
 	},
 	primaryText: { color: "white", fontWeight: "700" },
 
+	secondaryBtn: {
+		marginTop: 12,
+		paddingVertical: 8,
+		borderRadius: 8,
+		backgroundColor: "#fffdfd",
+	},
+
+	secondaryText: {
+		color: "#494949",
+		fontWeight: 700,
+	},
+
 	switchRow: { marginTop: 10, alignItems: "center" },
 	switchText: { color: "white" },
+
+	forgotWrapper: {
+		width: "100%",
+		alignItems: "flex-end",
+		marginTop: 6,
+	},
+
+	forgotText: {
+		color: "#f6fafb",
+		fontWeight: "500",
+	},
 });
