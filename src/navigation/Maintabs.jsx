@@ -14,6 +14,7 @@ export default function Maintabs() {
 	return (
 		<Tab.Navigator
 			screenOptions={({ route }) => ({
+				headerShown: false,
 				tabBarIcon: ({ color, size }) => {
 					if (route.name === "Home") {
 						return <HomeIcon width={size} height={size} fill={color} />;

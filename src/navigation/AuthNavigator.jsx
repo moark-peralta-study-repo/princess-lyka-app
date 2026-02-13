@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 
 export default function AuthNavigator() {
 	return (
-		<Stack.Navigator>
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen name="RegistrationCode" component={RegistrationCode} />
 			<Stack.Screen name="ResetPassword" component={ResetPassword} />
 			<Stack.Screen name="VerificationCode" component={VerificationCode} />
