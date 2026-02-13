@@ -8,7 +8,7 @@ export default function LoginForm({ onClose, onSwitch }) {
 	const navigation = useNavigation();
 
 	function emulateLogin() {
-		navigation.navigate("Maintabs");
+		navigation.navigate("Auth", { screen: "VerificationCode" });
 	}
 
 	function emulateForgotPassword() {
