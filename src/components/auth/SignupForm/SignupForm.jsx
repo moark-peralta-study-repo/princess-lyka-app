@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import styles from "./styles";
+import AuthBtn from "../../ui/AuthBtn/AuthBtn";
+import { useNavigation } from "@react-navigation/native";
 
 export default function SignupForm({ onClose, onSwitch }) {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
+
+	const navigation = useNavigation();
+
+	function emulateSignup() {
+		navigation.navigate("Auth", { screen: "RegistrationCode" });
+	}
 
 	return (
 		<View style={styles.container}>
@@ -38,9 +46,7 @@ export default function SignupForm({ onClose, onSwitch }) {
 				placeholderTextColor={"#626262"}
 			/>
 
-			<TouchableOpacity style={styles.primaryBtn}>
-				<Text style={styles.primaryText}>Sign Up</Text>
-			</TouchableOpacity>
+			<AuthBtn onPress={emulateSignup}>Sign up</AuthBtn>
 
 			<TouchableOpacity onPress={onSwitch} style={styles.switchRow}>
 				<Text style={styles.switchText}>Already have an account? Login</Text>
