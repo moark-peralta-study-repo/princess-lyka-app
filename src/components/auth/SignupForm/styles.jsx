@@ -26,9 +26,16 @@ export default StyleSheet.create({
 		borderRadius: 10,
 		backgroundColor: "#615030",
 		alignItems: "center",
+		borderWidth: 1,
 	},
 	primaryText: { color: "white", fontWeight: "700" },
 
-	switchRow: { marginTop: 10, alignItems: "center" },
-	switchText: { color: "white" },
+	switchRow: {
+		marginTop: 10,
+		alignItems: "center",
+		backgroundColor: "#ffffff",
+		paddingVertical: 6,
+		borderRadius: 8,
+	},
+	switchText: { color: "black", fontWeight: 800 },
 });

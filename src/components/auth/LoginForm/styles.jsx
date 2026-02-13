@@ -42,8 +42,14 @@ export default StyleSheet.create({
 		fontWeight: 700,
 	},
 
-	switchRow: { marginTop: 10, alignItems: "center" },
-	switchText: { color: "white" },
+	switchRow: {
+		marginTop: 10,
+		alignItems: "center",
+		backgroundColor: "#ffffff",
+		paddingVertical: 6,
+		borderRadius: 8,
+	},
+	switchText: { color: "black", fontWeight: "800" },
 
 	forgotWrapper: {
 		width: "100%",
