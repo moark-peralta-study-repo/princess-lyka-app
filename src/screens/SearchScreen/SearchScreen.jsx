@@ -1,18 +1,12 @@
-import React, { useState } from "react";
-import {
-	View,
-	Text,
-	StyleSheet,
-	SafeAreaView,
-	TextInput,
-	ScrollView,
-	Pressable,
-} from "react-native";
+import { useState } from "react";
+import { View, Text, SafeAreaView, ScrollView, Pressable } from "react-native";
 import SearchBar from "../../components/ui/SearchBar/SearchBar";
 import { styles } from "./styles";
+import FilterDrawer from "../../components/Maintabs/FilterDrawer/FilterDrawer";
 
 export default function SearchScreen() {
 	const [q, setQ] = useState("");
+	const [filterOpen, setFilterOpen] = useState(false);
 
 	const recent = ["Cat food", "Leash", "Dog shampoo", "Treats"];
 	const popular = [
@@ -30,7 +24,9 @@ export default function SearchScreen() {
 					value={q}
 					onChangeText={setQ}
 					autoFocus
-					onFilterPress={() => {}}
+					onFilterPress={() => {
+						setFilterOpen(true);
+					}}
 				/>
 
 				<View style={styles.rowBetween}>
@@ -68,6 +64,12 @@ export default function SearchScreen() {
 					))}
 				</View>
 			</ScrollView>
+			<FilterDrawer
+				visible={filterOpen}
+				onClose={() => setFilterOpen(false)}
+				heightPct={0.5}
+				title="Filter By"
+			/>
 		</SafeAreaView>
 	);
 }
