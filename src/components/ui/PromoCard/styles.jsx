@@ -19,17 +19,24 @@ export const styles = StyleSheet.create({
 	promoTitle: {
 		fontSize: 18,
 		fontWeight: "800",
-		color: "#111827",
+		color: "#109331",
 		marginTop: 2,
 	},
-	promoDesc: { fontSize: 11, color: "#374151", marginTop: 6, maxWidth: 180 },
+
+	promoOffer: {
+		fontSize: 10,
+		color: "#ff9800",
+		fontWeight: "700",
+	},
+
+	promoDesc: { fontSize: 11, color: "#374151", marginTop: 6, maxWidth: 200 },
 	promoBtn: {
 		marginTop: 10,
 		alignSelf: "flex-start",
-		paddingHorizontal: 12,
+		paddingHorizontal: 20,
 		paddingVertical: 8,
 		borderRadius: 12,
-		backgroundColor: "#0b6b7a",
+		backgroundColor: "#298683",
 	},
 	promoBtnText: { color: "#fff", fontSize: 12, fontWeight: "700" },
 });

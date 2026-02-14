@@ -5,6 +5,7 @@ export default function PromoCard() {
 	return (
 		<View style={styles.promoCard}>
 			<View style={{ flex: 1 }}>
+				<Text style={styles.promoOffer}>Trade-In-Offer</Text>
 				<Text style={styles.promoLabel}>Super Value Deals</Text>
 				<Text style={styles.promoTitle}>On all Products</Text>
 				<Text style={styles.promoDesc}>
