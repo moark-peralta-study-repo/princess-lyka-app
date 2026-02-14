@@ -25,4 +25,16 @@ export const styles = StyleSheet.create({
 		fontWeight: "700",
 		color: "#2b6cb0",
 	},
+
+	sectionTitle: {
+		fontSize: 13,
+		fontWeight: "800",
+		color: "#298693",
+		marginTop: 2,
+	},
+
+	grid2: {
+		flexDirection: "row",
+		gap: 12,
+	},
 });

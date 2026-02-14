@@ -59,8 +59,8 @@ export const styles = StyleSheet.create({
 	badge: {
 		paddingHorizontal: 8,
 		paddingVertical: 4,
-		borderRadius: 10,
-		backgroundColor: "#ffe7c2",
+		borderRadius: 100,
+		backgroundColor: "#F5CB58",
 	},
-	badgeText: { fontSize: 10, fontWeight: "900", color: "#9a5b00" },
+	badgeText: { fontSize: 10, fontWeight: "900", color: "#ffffff" },
 });
