@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
 	card: {
-		flex: 1,
+		width: "48%",
 		borderRadius: 16,
 		backgroundColor: "#fff",
 		borderWidth: 1,
@@ -20,7 +20,6 @@ export const styles = StyleSheet.create({
 	cardTitle: {
 		fontSize: 12,
 		fontWeight: "800",
-		color: "f0f2f5",
 	},
 	cardSub: {
 		fontSize: 10,
