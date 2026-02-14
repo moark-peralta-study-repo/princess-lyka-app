@@ -6,6 +6,7 @@ import CategoryCard from "../../ui/CategoryCard/CategoryCard";
 import ProductCard from "../../ui/ProductCard/ProductCard";
 import { styles } from "./styles";
 import PromoCard from "../../ui/PromoCard/PromoCard";
+import UserHeader from "../../ui/UserHeader/UserHeader";
 
 export default function HomePage() {
 	const navigation = useNavigation();
@@ -17,22 +18,7 @@ export default function HomePage() {
 	return (
 		<SafeAreaView style={styles.safe}>
 			<ScrollView contentContainerStyle={styles.container}>
-				<View style={styles.headerRow}>
-					<Image
-						source={require("../../../../assets/avatar-dp.png")}
-						style={styles.avatar}
-					/>
-
-					<View style={styles.headerCenter}>
-						<Text style={styles.welcome}>Welcome, User</Text>
-						<Text style={styles.sub}>Deliver to</Text>
-						<Text style={styles.city}>Bacolor City</Text>
-					</View>
-
-					<View style={styles.bell}>
-						<Bell size={18} color="#7a2e2e" />
-					</View>
-				</View>
+				<UserHeader />
 
 				<View style={styles.searchRow}>
 					<Pressable style={styles.searchPill} onPress={emulateSearch}>
