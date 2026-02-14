@@ -16,7 +16,7 @@ export default function Maintabs() {
 			screenOptions={({ route }) => ({
 				headerShown: false,
 				tabBarIcon: ({ color, size }) => {
-					if (route.name === "Home") {
+					if (route.name === "HomePage") {
 						return <HomeIcon width={size} height={size} fill={color} />;
 					}
 					if (route.name === "Cart") {
@@ -31,7 +31,7 @@ export default function Maintabs() {
 				},
 			})}
 		>
-			<Tab.Screen name="Home" component={HomePage} />
+			<Tab.Screen name="HomePage" component={HomePage} />
 			<Tab.Screen name="Cart" component={Cart} />
 			<Tab.Screen name="Profile" component={UserProfile} />
 			<Tab.Screen name="Wishlist" component={Wishlist} />

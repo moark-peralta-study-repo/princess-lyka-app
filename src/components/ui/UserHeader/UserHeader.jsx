@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import { styles } from "./styles";
 import { Bell } from "lucide-react-native";
 
