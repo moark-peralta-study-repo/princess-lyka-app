@@ -1,9 +1,67 @@
-import { View, Text } from "react-native";
+import { useState } from "react";
+import { View, Text, SafeAreaView, ScrollView, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Bell, ChevronLeft } from "lucide-react-native";
+import { styles } from "./styles";
+import PrimaryBtn from "../../ui/PrimaryBtn";
+import CartItemCard from "../../ui/CartItem/CartItem";
+import { DUMMY_ITEMS } from "../../../data/dummyProducts";
+import ScreenHeader from "../../ui/ScreenHeader/ScreenHeader";
 
 export default function Cart() {
+	const [items, setItems] = useState(DUMMY_ITEMS);
+
+	const navigation = useNavigation();
+
+	function emulateCheckOut() {
+		navigation.navigate("Checkout");
+	}
+
+	const inc = (id) =>
+		setItems((prev) =>
+			prev.map((item) =>
+				item.id === id ? { ...item, qty: item.qty + 1 } : item,
+			),
+		);
+
+	const dec = (id) =>
+		setItems((prev) =>
+			prev.map((item) =>
+				item.id === id ? { ...item, qty: Math.max(1, item.qty - 1) } : item,
+			),
+		);
+
+	const remove = (id) =>
+		setItems((prev) => prev.filter((item) => item.id !== id));
+
 	return (
-		<View>
-			<Text>Cart</Text>
-		</View>
+		<SafeAreaView style={styles.safe}>
+			<View style={styles.container}>
+				<ScreenHeader title="Cart" />
+			</View>
+
+			<ScrollView contentContainerStyle={styles.list}>
+				{items.map((item) => (
+					<CartItemCard
+						title={item.title}
+						meta={item.meta}
+						qty={item.qty}
+						onDec={() => dec(item.id)}
+						onInc={() => dec(item.id)}
+						onRemove={() => remove(item.id)}
+						key={item.id}
+					/>
+				))}
+
+				<View style={{ height: 90 }} />
+
+				<PrimaryBtn
+					style={{ position: "absolute", left: 16, right: 16, bottom: 18 }}
+					onPress={emulateCheckOut}
+				>
+					<Text style={styles.checkoutText}>Check Out</Text>
+				</PrimaryBtn>
+			</ScrollView>
+		</SafeAreaView>
 	);
 }

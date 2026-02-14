@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, TextInput, Pressable } from "react-native";
 import { SearchIcon, SlidersHorizontal } from "lucide-react-native";
 import { styles } from "./styles";
@@ -10,6 +10,7 @@ export default function SearchBar({
 	placeholder = "Search",
 	onPress,
 	onFilterPress,
+	onSubmitEditing,
 	autoFocus = false,
 }) {
 	const pill = (
@@ -25,6 +26,8 @@ export default function SearchBar({
 					style={styles.searchInput}
 					autoFocus={autoFocus}
 					underlineColorAndroid="transparent"
+					onSubmitEditing={onSubmitEditing}
+					returnKeyType="search"
 				/>
 			) : (
 				<Text style={styles.searchPlaceholder}>{placeholder}</Text>

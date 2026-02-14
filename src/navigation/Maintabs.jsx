@@ -33,8 +33,8 @@ export default function Maintabs() {
 		>
 			<Tab.Screen name="HomePage" component={HomePage} />
 			<Tab.Screen name="Cart" component={Cart} />
-			<Tab.Screen name="Profile" component={UserProfile} />
 			<Tab.Screen name="Wishlist" component={Wishlist} />
+			<Tab.Screen name="Profile" component={UserProfile} />
 		</Tab.Navigator>
 	);
 }

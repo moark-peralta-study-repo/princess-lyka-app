@@ -4,6 +4,13 @@ export const styles = StyleSheet.create({
 	safe: { flex: 1, backgroundColor: "#e9e9e9" },
 	container: { padding: 16, paddingBottom: 24, backgroundColor: "#ffffff" },
 
+	grid: {
+		flexDirection: "row",
+		flexWrap: "wrap",
+		gap: 12,
+		marginTop: 12,
+	},
+
 	searchWrap: {
 		height: 44,
 		borderRadius: 14,

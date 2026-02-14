@@ -1,6 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { SearchIcon, SlidersHorizontal } from "lucide-react-native";
-import { View, Text, Pressable, ScrollView } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./styles";
 import PromoCard from "../../ui/PromoCard/PromoCard";
@@ -15,6 +14,10 @@ export default function HomePage() {
 
 	function emulateSearch() {
 		navigation.getParent()?.navigate("Search");
+	}
+
+	function emulateNavigationProductDetails() {
+		navigation.getParent()?.navigate("ProductDetails");
 	}
 
 	return (
@@ -36,8 +39,16 @@ export default function HomePage() {
 
 				<Text style={styles.sectionTitle}>Featured Products</Text>
 				<View style={styles.grid2}>
-					<ProductCard title="Premium Cat Food" price="P35.00" />
-					<ProductCard title="Premium Dog Food" price="P35.00" />
+					<ProductCard
+						title="Premium Cat Food"
+						price="P35.00"
+						onPress={emulateNavigationProductDetails}
+					/>
+					<ProductCard
+						title="Premium Dog Food"
+						price="P35.00"
+						onPress={emulateNavigationProductDetails}
+					/>
 				</View>
 
 				<Text style={styles.sectionTitle}>Best Selling Products</Text>

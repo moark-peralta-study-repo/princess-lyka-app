@@ -1,12 +1,12 @@
-import { View, Text } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import { styles } from "./styles";
 
-export default function ProductCard({ title, price }) {
+export default function ProductCard({ id, title, price, onPress }) {
 	return (
-		<View style={styles.card}>
-			<View style={[styles.thumb, { height: 90 }]} />
+		<Pressable style={styles.card} onPress={onPress}>
+			<View style={[styles.thumb, { height: 200 }]} />
 			<Text style={styles.cardTitle}>{title}</Text>
 			<Text style={styles.cardSub}>{price}</Text>
-		</View>
+		</Pressable>
 	);
 }
