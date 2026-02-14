@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import CategoryCard from "../../ui/CategoryCard/CategoryCard";
 import ProductCard from "../../ui/ProductCard/ProductCard";
 import { styles } from "./styles";
+import PromoCard from "../../ui/PromoCard/PromoCard";
 
 export default function HomePage() {
 	const navigation = useNavigation();
@@ -44,34 +45,7 @@ export default function HomePage() {
 					</Pressable>
 				</View>
 
-				<View>
-					<View>
-						<Text>Super Value Deals</Text>
-						<Text>On all products</Text>
-						<Text>Save more with coupons & up to 70% off </Text>
-						<View>
-							<View>
-								<Text>Shop now</Text>
-							</View>
-						</View>
-
-						{/* promo image*/}
-						<View />
-
-						{/* by category */}
-						<Text>Browse by Category</Text>
-						<View>
-							<CategoryCard title="Accessories" subtitle="840 products" />
-							<CategoryCard title="Food" subtitle="640 products" />
-						</View>
-
-						<Text>Features Products</Text>
-						<View>
-							<ProductCard />
-							<ProductCard />
-						</View>
-					</View>
-				</View>
+				<PromoCard />
 			</ScrollView>
 		</SafeAreaView>
 	);
