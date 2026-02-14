@@ -5,6 +5,7 @@ import HomeScreen from "../screens/HomeScreen/HomeScreen";
 import Maintabs from "./Maintabs";
 import AuthNavigator from "./AuthNavigator";
 import SearchScreen from "../screens/SearchScreen/SearchScreen";
+import ProductsDetails from "../screens/ProductDetails/ProductsDetails";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ export default function AppNavigator() {
 				<Stack.Screen name="Maintabs" component={Maintabs} />
 				<Stack.Screen name="Auth" component={AuthNavigator} />
 				<Stack.Screen name="Search" component={SearchScreen} />
+				<Stack.Screen name="ProductDetails" component={ProductsDetails} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
