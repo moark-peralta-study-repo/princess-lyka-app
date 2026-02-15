@@ -28,7 +28,10 @@ export default function UserProfile() {
 
 				<View style={styles.avatarWrap}>
 					<View style={styles.avatarOuter}>
-						<Image style={styles.avatar} />
+						<Image
+							style={styles.avatar}
+							source={require("../../../../assets/userdp.png")}
+						/>
 					</View>
 				</View>
 
