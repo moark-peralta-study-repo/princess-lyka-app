@@ -1,9 +1,9 @@
-import { View, Text } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import { styles } from "./styles";
 
-function BestSellingCard({ title, price }) {
+function BestSellingCard({ title, price, onPress }) {
 	return (
-		<View style={styles.bestCard}>
+		<Pressable style={styles.bestCard} onPress={onPress}>
 			<View style={styles.bestImg} />
 			<View style={styles.bestMeta}>
 				<Text style={styles.bestTitle} numberOfLines={1}>
@@ -11,7 +11,7 @@ function BestSellingCard({ title, price }) {
 				</Text>
 				<Text style={styles.bestPrice}>{price}</Text>
 			</View>
-		</View>
+		</Pressable>
 	);
 }
 export default BestSellingCard;

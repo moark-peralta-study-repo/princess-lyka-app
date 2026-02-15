@@ -76,10 +76,11 @@ export default function UserProfile() {
 					<View style={styles.logoutWrap}>
 						<PrimaryBtn
 							style={styles.logoutBtn}
+							textStyle={styles.logoutText}
 							onPress={() => navigation.navigate("HomeScreen")}
 						>
 							<LogOut size={18} color="#2f7f86" />
-							<Text style={styles.logoutText}>Logout</Text>
+							<Text>Logout</Text>
 						</PrimaryBtn>
 					</View>
 				</View>

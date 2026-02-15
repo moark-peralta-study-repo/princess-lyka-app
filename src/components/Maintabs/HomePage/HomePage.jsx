@@ -54,8 +54,16 @@ export default function HomePage() {
 				<Text style={styles.sectionTitle}>Best Selling Products</Text>
 
 				<View style={styles.grid2}>
-					<BestSellingCard title="Dog Leash" price="₱18.26" />
-					<BestSellingCard title="Cat Food Royal Canin" price="₱101.8" />
+					<BestSellingCard
+						title="Dog Leash"
+						price="₱18.26"
+						onPress={emulateNavigationProductDetails}
+					/>
+					<BestSellingCard
+						title="Cat Food Royal Canin"
+						price="₱101.8"
+						onPress={emulateNavigationProductDetails}
+					/>
 				</View>
 
 				<View style={styles.grid2}>
