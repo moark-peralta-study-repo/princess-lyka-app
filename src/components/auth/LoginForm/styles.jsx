@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-	container: { flex: 1, padding: 75, gap: 12 },
+	container: { flex: 1, padding: 50, gap: 12 },
 	headerRow: {
 		flexDirection: "row",
 		justifyContent: "space-between",
