@@ -7,6 +7,11 @@ import AuthNavigator from "./AuthNavigator";
 import SearchScreen from "../screens/SearchScreen/SearchScreen";
 import ProductsDetails from "../screens/ProductDetails/ProductsDetails";
 import CheckOutScreen from "../screens/CheckOutScreen/CheckOutScreen";
+import EditProfileScreen from "../screens/EditProfileScreen/EditProfileScreen";
+import AddressScreen from "../screens/AddressScreen/AddressScreen";
+import BalanceScreen from "../screens/BalanceScreen/BalanceScreen";
+import OrdersScreen from "../screens/OrdersScreen/OrdersScreen";
+import NotificationSettingsScreen from "../screens/NotificationSettingsScreen/NotificationSettingsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +25,14 @@ export default function AppNavigator() {
 				<Stack.Screen name="Search" component={SearchScreen} />
 				<Stack.Screen name="ProductDetails" component={ProductsDetails} />
 				<Stack.Screen name="Checkout" component={CheckOutScreen} />
+				<Stack.Screen name="EditProfile" component={EditProfileScreen} />
+				<Stack.Screen name="Address" component={AddressScreen} />
+				<Stack.Screen name="Balance" component={BalanceScreen} />
+				<Stack.Screen name="Orders" component={OrdersScreen} />
+				<Stack.Screen
+					name="Notification"
+					component={NotificationSettingsScreen}
+				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

@@ -16,6 +16,22 @@ import { useNavigation } from "@react-navigation/native";
 export default function UserProfile() {
 	const navigation = useNavigation();
 
+	function emulateNavigateEditProfile() {
+		navigation.navigate("EditProfile");
+	}
+
+	function emulateNavigateAddress() {
+		navigation.navigate("Address");
+	}
+
+	function emulateNavigateBalance() {
+		navigation.navigate("Balance");
+	}
+
+	function emulateNavigateOrders() {
+		navigation.navigate("Orders");
+	}
+
 	return (
 		<SafeAreaView style={styles.safe}>
 			<ScrollView
@@ -48,12 +64,12 @@ export default function UserProfile() {
 						<ProfileMenuItem
 							icon={<User size={20} />}
 							label="Edit profile"
-							onPress={() => {}}
+							onPress={emulateNavigateEditProfile}
 						/>
 						<ProfileMenuItem
 							icon={<MapPinned size={20} />}
 							label="Address"
-							onPress={() => {}}
+							onPress={emulateNavigateAddress}
 						/>
 						<ProfileMenuItem
 							icon={<Bell size={20} />}
@@ -67,12 +83,12 @@ export default function UserProfile() {
 						<ProfileMenuItem
 							icon={<ClipboardList size={20} />}
 							label="My Orders"
-							onPress={() => {}}
+							onPress={emulateNavigateOrders}
 						/>
 						<ProfileMenuItem
 							icon={<Package size={20} />}
 							label="Check Balance"
-							onPress={() => {}}
+							onPress={emulateNavigateBalance}
 						/>
 					</View>
 
