@@ -14,6 +14,7 @@ import OrdersScreen from "../screens/OrdersScreen/OrdersScreen";
 import NotificationSettingsScreen from "../screens/NotificationSettingsScreen/NotificationSettingsScreen";
 import PaymentMethodScreen from "../screens/PaymentMethodScreen/PaymentMethodScreen";
 import OrderConfirmedScreen from "../screens/OrderConfirmedScreen/OrderConfirmedScreen";
+import MyOrdersScreen from "../screens/MyOrders/MyOrders";
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +39,7 @@ export default function AppNavigator() {
 
 				<Stack.Screen name="OrderConfirmed" component={OrderConfirmedScreen} />
 				<Stack.Screen name="PaymentMethod" component={PaymentMethodScreen} />
+				<Stack.Screen name="MyOrders" component={MyOrdersScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
