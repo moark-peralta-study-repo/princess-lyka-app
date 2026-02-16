@@ -26,13 +26,16 @@ export default function CheckoutScreen() {
 
 	const remove = (id) => setItems((prev) => prev.filter((it) => it.id !== id));
 
-	// dummy totals
 	const totals = useMemo(() => {
 		const subtotal = 110;
 		const shipping = 10;
 		const total = subtotal + shipping;
 		return { subtotal, shipping, total };
 	}, [items]);
+
+	function emulatePlacerOrder() {
+		navigation.navigate("OrderConfirmed");
+	}
 
 	return (
 		<SafeAreaView style={styles.safe}>
@@ -55,7 +58,12 @@ export default function CheckoutScreen() {
 						))}
 					</View>
 
-					<Text style={styles.sectionTitle}>Delivery Address</Text>
+					<View style={styles.sectionHeaderRow}>
+						<Text style={styles.sectionTitle}>Delivery Address</Text>
+						<Pressable onPress={() => navigation.navigate("Address")}>
+							<ChevronRight size={18} color="#9ca3af" />
+						</Pressable>
+					</View>
 
 					<Pressable style={styles.selectRow} onPress={() => {}}>
 						<View style={styles.leftMini}>
@@ -71,12 +79,15 @@ export default function CheckoutScreen() {
 
 						<View style={styles.rightMini}>
 							<CheckCircle2 size={18} color="#22c55e" />
-							<ChevronRight size={18} color="#9ca3af" />
 						</View>
 					</Pressable>
 
-					{/* Payment Method */}
-					<Text style={styles.sectionTitle}>Payment Method</Text>
+					<View style={styles.sectionHeaderRow}>
+						<Text style={styles.sectionTitle}>Payment Method</Text>
+						<Pressable onPress={() => navigation.navigate("PaymentMethod")}>
+							<ChevronRight size={18} color="#9ca3af" />
+						</Pressable>
+					</View>
 
 					<Pressable style={styles.selectRow} onPress={() => {}}>
 						<View style={styles.leftMini}>
@@ -91,7 +102,6 @@ export default function CheckoutScreen() {
 
 						<View style={styles.rightMini}>
 							<CheckCircle2 size={18} color="#22c55e" />
-							<ChevronRight size={18} color="#9ca3af" />
 						</View>
 					</Pressable>
 
@@ -105,7 +115,7 @@ export default function CheckoutScreen() {
 
 					<View style={{ height: 90 }} />
 
-					<PrimaryBtn style={styles.bottomBtn} onPress={() => {}}>
+					<PrimaryBtn style={styles.bottomBtn} onPress={emulatePlacerOrder}>
 						<Text>Place Order</Text>
 					</PrimaryBtn>
 				</ScrollView>

@@ -25,6 +25,14 @@ export const styles = StyleSheet.create({
 		justifyContent: "space-between",
 	},
 
+	sectionHeaderRow: {
+		marginTop: 18,
+		marginBottom: 10,
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "space-between",
+	},
+
 	leftMini: { flexDirection: "row", gap: 10, alignItems: "center", flex: 1 },
 	rightMini: { flexDirection: "row", gap: 10, alignItems: "center" },
 
