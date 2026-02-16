@@ -3,10 +3,10 @@ import { View, Text, SafeAreaView, ScrollView, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Bell, ChevronLeft } from "lucide-react-native";
 import { styles } from "./styles";
-import PrimaryBtn from "../../ui/PrimaryBtn";
 import CartItemCard from "../../ui/CartItem/CartItem";
 import { DUMMY_ITEMS } from "../../../data/dummyProducts";
 import ScreenHeader from "../../ui/ScreenHeader/ScreenHeader";
+import PrimaryBtn from "../../ui/PrimaryBtn";
 
 export default function Cart() {
 	const [items, setItems] = useState(DUMMY_ITEMS);
@@ -58,6 +58,7 @@ export default function Cart() {
 				<PrimaryBtn
 					style={{ position: "absolute", left: 16, right: 16, bottom: 18 }}
 					onPress={emulateCheckOut}
+					variant={"primary"}
 				>
 					<Text style={styles.checkoutText}>Check Out</Text>
 				</PrimaryBtn>

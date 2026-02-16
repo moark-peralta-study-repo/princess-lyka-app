@@ -1,10 +1,20 @@
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Pressable, StyleSheet } from "react-native";
 
-export default function PrimaryBtn({ children, onPress, style, textStyle }) {
+export default function PrimaryBtn({
+	children,
+	onPress,
+	style,
+	variant = "primary", // "primary" | "ghost"
+}) {
 	return (
 		<Pressable
 			onPress={onPress}
-			style={({ pressed }) => [styles.btn, pressed && styles.pressed, style]}
+			style={({ pressed }) => [
+				styles.btn,
+				variant === "ghost" && styles.ghost,
+				pressed && styles.pressed,
+				style,
+			]}
 			android_ripple={{ color: "#b8dbe2" }}
 		>
 			<View style={styles.content}>{children}</View>
@@ -22,12 +32,13 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 18,
 		elevation: 6,
 	},
-
+	ghost: {
+		backgroundColor: "#f3f4f6",
+	},
 	pressed: {
 		opacity: 0.85,
 		elevation: 2,
 	},
-
 	content: {
 		flexDirection: "row",
 		alignItems: "center",
