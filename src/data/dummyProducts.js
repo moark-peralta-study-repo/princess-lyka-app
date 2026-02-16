@@ -27,4 +27,32 @@ export const DUMMY_ITEMS = [
 		qty: 1,
 		price: "₱28.00",
 	},
+	{
+		id: 5,
+		title: "Ollie Baked Beef Dish Dry\nDog Food, 5 lbs.",
+		meta: "4.5 (-4.00 Tax)",
+		qty: 1,
+		price: "₱28.00",
+	},
+	{
+		id: 6,
+		title: "Ollie Baked Beef Dish Dry\nDog Food, 5 lbs.",
+		meta: "4.5 (-4.00 Tax)",
+		qty: 1,
+		price: "₱28.00",
+	},
+	{
+		id: 7,
+		title: "Ollie Baked Beef Dish Dry\nDog Food, 5 lbs.",
+		meta: "4.5 (-4.00 Tax)",
+		qty: 1,
+		price: "₱28.00",
+	},
+	{
+		id: 8,
+		title: "Ollie Baked Beef Dish Dry\nDog Food, 5 lbs.",
+		meta: "4.5 (-4.00 Tax)",
+		qty: 1,
+		price: "₱28.00",
+	},
 ];
