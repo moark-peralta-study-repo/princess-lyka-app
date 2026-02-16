@@ -14,7 +14,9 @@ export default function ProductDetailsScreen() {
 	const route = useRoute();
 	const { id } = route.params || {};
 
-	function emulateToCheckOut() {}
+	function emulateToCheckOut() {
+		navigation.navigate("Checkout");
+	}
 
 	function emulateToAddToCart() {}
 
@@ -89,10 +91,10 @@ export default function ProductDetailsScreen() {
 				</View>
 
 				<View style={styles.actionsRow}>
-					<PrimaryBtn style={{ flex: 1 }}>
+					<PrimaryBtn style={{ flex: 1 }} onPress={emulateToCheckOut}>
 						<Text>Buy now</Text>
 					</PrimaryBtn>
-					<PrimaryBtn style={{ flex: 1 }}>
+					<PrimaryBtn style={{ flex: 1 }} onPress={() => {}}>
 						<Text>Add to Cart</Text>
 					</PrimaryBtn>
 				</View>
