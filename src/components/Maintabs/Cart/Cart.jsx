@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { View, Text, SafeAreaView, ScrollView, Pressable } from "react-native";
+import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Bell, ChevronLeft } from "lucide-react-native";
 import { styles } from "./styles";
 import CartItemCard from "../../ui/CartItem/CartItem";
 import { DUMMY_ITEMS } from "../../../data/dummyProducts";
@@ -47,7 +46,7 @@ export default function Cart() {
 						meta={item.meta}
 						qty={item.qty}
 						onDec={() => dec(item.id)}
-						onInc={() => dec(item.id)}
+						onInc={() => inc(item.id)}
 						onRemove={() => remove(item.id)}
 						key={item.id}
 					/>

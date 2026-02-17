@@ -20,6 +20,10 @@ export default function MyOrdersScreen() {
 		return DUMMY_ORDERS.filter((order) => order.status === tab);
 	}, [tab]);
 
+	function emulateCancelOrder(id) {
+		navigation.navigate("CancelOrder", { id });
+	}
+
 	return (
 		<SafeAreaView style={styles.safe}>
 			{/* Header */}
@@ -77,7 +81,7 @@ export default function MyOrdersScreen() {
 						<OngoingCard
 							key={order.id}
 							order={order}
-							onCancel={() => {}}
+							onCancel={() => emulateCancelOrder(order.id)}
 							onTrack={() => {}}
 						/>
 					) : (
