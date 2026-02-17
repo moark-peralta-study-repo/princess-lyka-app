@@ -22,7 +22,9 @@ export default function HomePage() {
 
 	return (
 		<SafeAreaView style={styles.safe}>
-			<ScrollView contentContainerStyle={styles.container}>
+			<ScrollView
+				contentContainerStyle={[styles.container, { paddingBottom: 150 }]}
+			>
 				<UserHeader />
 				<SearchBar
 					mode="preview"

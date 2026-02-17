@@ -39,7 +39,7 @@ export default function Cart() {
 				<ScreenHeader title="Cart" />
 			</View>
 
-			<ScrollView contentContainerStyle={styles.list}>
+			<ScrollView contentContainerStyle={[styles.list, { paddingBottom: 120 }]}>
 				{items.map((item) => (
 					<CartItemCard
 						title={item.title}

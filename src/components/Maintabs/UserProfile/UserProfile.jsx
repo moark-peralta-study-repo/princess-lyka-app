@@ -35,7 +35,7 @@ export default function UserProfile() {
 	return (
 		<SafeAreaView style={styles.safe}>
 			<ScrollView
-				contentContainerStyle={styles.container}
+				contentContainerStyle={[styles.container, { paddingBottom: 175 }]}
 				showsVerticalScrollIndicator={false}
 			>
 				<View style={styles.header}>

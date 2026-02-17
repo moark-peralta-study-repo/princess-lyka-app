@@ -11,7 +11,7 @@ export default function Wishlist() {
 	return (
 		<SafeAreaView style={styles.safe}>
 			<ScrollView
-				contentContainerStyle={styles.container}
+				contentContainerStyle={[styles.container, { paddingBottom: 175 }]}
 				showsVerticalScrollIndicator={false}
 			>
 				<ScreenHeader title="Wishlist" onBack={undefined} />
