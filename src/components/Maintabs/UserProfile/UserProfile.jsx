@@ -32,6 +32,10 @@ export default function UserProfile() {
 		navigation.navigate("MyOrders");
 	}
 
+	function emulateNavigateNotifications() {
+		navigation.navigate("Notification");
+	}
+
 	return (
 		<SafeAreaView style={styles.safe}>
 			<ScrollView
@@ -74,7 +78,7 @@ export default function UserProfile() {
 						<ProfileMenuItem
 							icon={<Bell size={20} />}
 							label="Notifications"
-							onPress={() => {}}
+							onPress={emulateNavigateNotifications}
 						/>
 					</View>
 
