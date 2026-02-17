@@ -32,7 +32,7 @@ export default function AppNavigator() {
 				<Stack.Screen name="EditProfile" component={EditProfileScreen} />
 				<Stack.Screen name="Address" component={AddressScreen} />
 				<Stack.Screen name="Balance" component={BalanceScreen} />
-				<Stack.Screen name="Orders" component={OrdersScreen} />
+				<Stack.Screen name="MyOrders" component={MyOrdersScreen} />
 				<Stack.Screen
 					name="Notification"
 					component={NotificationSettingsScreen}
@@ -40,7 +40,6 @@ export default function AppNavigator() {
 
 				<Stack.Screen name="OrderConfirmed" component={OrderConfirmedScreen} />
 				<Stack.Screen name="PaymentMethod" component={PaymentMethodScreen} />
-				<Stack.Screen name="MyOrders" component={MyOrdersScreen} />
 				<Stack.Screen name="CancelOrder" component={CancelOrderScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>

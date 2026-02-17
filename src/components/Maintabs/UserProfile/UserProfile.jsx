@@ -29,7 +29,7 @@ export default function UserProfile() {
 	}
 
 	function emulateNavigateOrders() {
-		navigation.navigate("Orders");
+		navigation.navigate("MyOrders");
 	}
 
 	return (
