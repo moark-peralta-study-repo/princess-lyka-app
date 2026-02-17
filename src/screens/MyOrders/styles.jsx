@@ -78,7 +78,7 @@ export const styles = StyleSheet.create({
 	},
 	pillText: { fontSize: 10, fontWeight: "900" },
 
-	cancelBtn: { backgroundColor: "#ef4444" },
+	cancelBtn: { backgroundColor: "#ef4444", width: 80 },
 	cancelText: { color: "#fff" },
 
 	trackBtn: { backgroundColor: "#111827" },

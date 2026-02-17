@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Bell, ChevronLeft } from "lucide-react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function ScreenHeader({
 	title,
@@ -9,6 +10,7 @@ export default function ScreenHeader({
 	right = "bell", // "bell" | "none" | ReactNode
 }) {
 	const navigation = useNavigation();
+	const insets = useSafeAreaInsets();
 
 	const handleBack = () => {
 		if (onBack) return onBack();
@@ -16,7 +18,7 @@ export default function ScreenHeader({
 	};
 
 	return (
-		<View style={styles.row}>
+		<View style={[styles.row, { paddingTop: insets.top }]}>
 			<Pressable style={styles.iconBtn} onPress={handleBack}>
 				<ChevronLeft size={20} color="#111827" />
 			</Pressable>

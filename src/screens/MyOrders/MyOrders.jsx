@@ -26,7 +26,6 @@ export default function MyOrdersScreen() {
 
 	return (
 		<SafeAreaView style={styles.safe}>
-			{/* Header */}
 			<View style={styles.headerRow}>
 				<Pressable style={styles.iconBtn} onPress={() => navigation.goBack()}>
 					<ChevronLeft size={18} color="#111827" />
