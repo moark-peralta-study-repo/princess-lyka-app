@@ -38,7 +38,6 @@ export default function AppNavigator() {
 				<Stack.Screen name="OrderConfirmed" component={OrderConfirmedScreen} />
 				<Stack.Screen name="PaymentMethod" component={PaymentMethodScreen} />
 				<Stack.Screen name="CancelOrder" component={CancelOrderScreen} />
-				<Stack.Screen name="ChatBot" component={ChatbotScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

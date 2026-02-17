@@ -16,8 +16,8 @@ export default function Maintabs() {
 			tabBar={(props) => <CustomBottomBar {...props} />}
 		>
 			<Tab.Screen name="HomePage" component={HomePage} />
-			<Tab.Screen name="Cart" component={Cart} />
 			<Tab.Screen name="Wishlist" component={Wishlist} />
+			<Tab.Screen name="Cart" component={Cart} />
 			<Tab.Screen name="Profile" component={UserProfile} />
 			<Tab.Screen name="ChatBot" component={ChatbotScreen} />
 		</Tab.Navigator>
