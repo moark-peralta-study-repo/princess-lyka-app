@@ -104,3 +104,10 @@ export const DUMMY_ORDERS = [
 		tag: "Completed",
 	},
 ];
+
+export const DUMMY_ADDRESSES = [
+	{ id: "home", label: "Home", sub: "Pasay City", isDefault: true },
+	{ id: "office", label: "Office", sub: "NU MOA Seaside" },
+	{ id: "apt", label: "Apartment", sub: "Cavite City" },
+	{ id: "parents", label: "Parent’s House", sub: "Quezon Province" },
+];

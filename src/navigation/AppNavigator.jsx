@@ -16,6 +16,7 @@ import MyOrdersScreen from "../screens/MyOrders/MyOrders";
 import CancelOrderScreen from "../screens/CancelOrder/CancelOrder";
 import ChatbotScreen from "../screens/ChatBot/ChatbotScreen";
 import NotificationsScreen from "../screens/NotificationScreen/NotificationScreen";
+import TrackOrderScreen from "../screens/TrackOrderScreen/TrackOrderScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +39,7 @@ export default function AppNavigator() {
 				<Stack.Screen name="OrderConfirmed" component={OrderConfirmedScreen} />
 				<Stack.Screen name="PaymentMethod" component={PaymentMethodScreen} />
 				<Stack.Screen name="CancelOrder" component={CancelOrderScreen} />
+				<Stack.Screen name="TrackOrder" component={TrackOrderScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

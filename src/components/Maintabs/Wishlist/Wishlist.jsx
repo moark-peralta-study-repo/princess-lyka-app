@@ -1,7 +1,7 @@
 import { SafeAreaView, ScrollView, Text, View } from "react-native";
 import { styles } from "./styles";
 import { useNavigation } from "@react-navigation/native";
-import { DUMMY_ITEMS } from "../../../data/dummyProducts";
+import { DUMMY_ITEMS } from "../../../data/dummyData";
 import ProductCard from "../../ui/ProductCard/ProductCard";
 import ScreenHeader from "../../ui/ScreenHeader/ScreenHeader";
 

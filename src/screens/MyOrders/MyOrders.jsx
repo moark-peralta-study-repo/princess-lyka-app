@@ -10,7 +10,7 @@ import {
 import { Bell, ChevronLeft, Star } from "lucide-react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./styles";
-import { DUMMY_ORDERS } from "../../data/dummyProducts";
+import { DUMMY_ORDERS } from "../../data/dummyData";
 
 export default function MyOrdersScreen() {
 	const navigation = useNavigation();
@@ -22,6 +22,10 @@ export default function MyOrdersScreen() {
 
 	function emulateCancelOrder(id) {
 		navigation.navigate("CancelOrder", { id });
+	}
+
+	function emulateTrackOrder(id) {
+		navigation.navigate("TrackOrder", { id });
 	}
 
 	return (
@@ -81,7 +85,7 @@ export default function MyOrdersScreen() {
 							key={order.id}
 							order={order}
 							onCancel={() => emulateCancelOrder(order.id)}
-							onTrack={() => {}}
+							onTrack={() => emulateTrackOrder(order.id)}
 						/>
 					) : (
 						<CompletedCard

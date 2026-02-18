@@ -5,7 +5,7 @@ import ScreenHeader from "../../components/ui/ScreenHeader/ScreenHeader";
 import CartItemCard from "../../components/ui/CartItem/CartItem";
 import { CheckCircle2, ChevronRight } from "lucide-react-native";
 import PrimaryBtn from "../../components/ui/PrimaryBtn";
-import { DUMMY_ITEMS } from "../../data/dummyProducts";
+import { DUMMY_ITEMS } from "../../data/dummyData";
 import { useNavigation } from "@react-navigation/native";
 
 export default function CheckoutScreen() {

@@ -3,7 +3,7 @@ import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./styles";
 import CartItemCard from "../../ui/CartItem/CartItem";
-import { DUMMY_ITEMS } from "../../../data/dummyProducts";
+import { DUMMY_ITEMS } from "../../../data/dummyData";
 import ScreenHeader from "../../ui/ScreenHeader/ScreenHeader";
 import PrimaryBtn from "../../ui/PrimaryBtn";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";

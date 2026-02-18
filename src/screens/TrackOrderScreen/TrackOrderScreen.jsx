@@ -3,11 +3,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import ScreenHeader from "../../components/ui/ScreenHeader/ScreenHeader";
 import { styles } from "./styles";
 
-export default function ChatbotScreen() {
+export default function TrackOrderScreen() {
 	return (
 		<SafeAreaView style={styles.safe}>
 			<View style={styles.container}>
-				<ScreenHeader title="Chatbot" onBack={undefined} />
+				<ScreenHeader title="Tracking Order" onBack={undefined} />
 			</View>
 		</SafeAreaView>
 	);

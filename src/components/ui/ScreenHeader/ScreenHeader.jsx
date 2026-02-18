@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
 		justifyContent: "space-between",
 		marginBottom: 12,
 	},
-	title: { fontSize: 16, fontWeight: "900", color: "#111827" },
+	title: { fontSize: 16, fontWeight: "900", color: "#6b4b3a" },
 	iconBtn: {
 		width: 44,
 		height: 44,

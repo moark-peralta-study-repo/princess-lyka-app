@@ -1,9 +1,13 @@
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
+import { styles } from "./styles";
+import ScreenHeader from "../../components/ui/ScreenHeader/ScreenHeader";
 
 export default function BalanceScreen() {
 	return (
-		<View>
-			<Text></Text>
-		</View>
+		<SafeAreaView style={styles.safe}>
+			<View style={styles.container}>
+				<ScreenHeader title="Remaining Balance" onBack={undefined} />
+			</View>
+		</SafeAreaView>
 	);
 }
