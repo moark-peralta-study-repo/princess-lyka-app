@@ -17,6 +17,7 @@ import CancelOrderScreen from "../screens/CancelOrder/CancelOrder";
 import ChatbotScreen from "../screens/ChatBot/ChatbotScreen";
 import NotificationsScreen from "../screens/NotificationScreen/NotificationScreen";
 import TrackOrderScreen from "../screens/TrackOrderScreen/TrackOrderScreen";
+import NewAddressScreen from "../screens/NewAddressScreen/NewAddressScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +41,7 @@ export default function AppNavigator() {
 				<Stack.Screen name="PaymentMethod" component={PaymentMethodScreen} />
 				<Stack.Screen name="CancelOrder" component={CancelOrderScreen} />
 				<Stack.Screen name="TrackOrder" component={TrackOrderScreen} />
+				<Stack.Screen name="NewAddress" component={NewAddressScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

@@ -5,9 +5,16 @@ import ScreenHeader from "../../components/ui/ScreenHeader/ScreenHeader";
 import PrimaryBtn from "../../components/ui/PrimaryBtn";
 import { styles } from "./styles";
 import { DUMMY_ADDRESSES } from "../../data/dummyData";
+import { useNavigation } from "@react-navigation/native";
+import NewAddressScreen from "../NewAddressScreen/NewAddressScreen";
 
 export default function AddressScreen() {
+	const navigation = useNavigation();
 	const [selectedId, setSelectedId] = useState("home");
+
+	function emulateNavigateNewAddress() {
+		navigation.navigate("NewAddress");
+	}
 
 	return (
 		<SafeAreaView style={styles.safe}>
@@ -32,7 +39,10 @@ export default function AddressScreen() {
 							/>
 						))}
 
-						<Pressable style={styles.addCard} onPress={() => {}}>
+						<Pressable
+							style={styles.addCard}
+							onPress={emulateNavigateNewAddress}
+						>
 							<Plus size={18} color="#111827" />
 							<Text style={styles.addText}>Add New Address</Text>
 						</Pressable>
