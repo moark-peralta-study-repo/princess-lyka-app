@@ -2,13 +2,10 @@ import { View, Text, Image } from "react-native";
 import { styles } from "./styles";
 import { Bell } from "lucide-react-native";
 
-export default function UserHeader() {
+export default function UserHeader({ userImgUrl }) {
 	return (
 		<View style={styles.headerRow}>
-			<Image
-				source={require("../../../../assets/avatar-dp.png")}
-				style={styles.avatar}
-			/>
+			<Image source={{ uri: userImgUrl }} style={styles.avatar} />
 
 			<View style={styles.headerCenter}>
 				<Text style={styles.welcome}>Welcome, User</Text>

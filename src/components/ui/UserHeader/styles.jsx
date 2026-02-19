@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
 		position: "relative",
 		justifyContent: "space-between",
 		marginBottom: 20,
+		marginTop: 20,
 	},
 
 	headerCenter: {

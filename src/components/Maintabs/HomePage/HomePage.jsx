@@ -29,7 +29,11 @@ export default function HomePage() {
 			<ScrollView
 				contentContainerStyle={[styles.container, { paddingBottom: 150 }]}
 			>
-				<UserHeader />
+				<UserHeader
+					userImgUrl={
+						"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzR0bIMZ71HVeR5zF4PihQaDvTQQk6bsVERw&s"
+					}
+				/>
 				<SearchBar
 					mode="preview"
 					onPress={emulateSearch}
