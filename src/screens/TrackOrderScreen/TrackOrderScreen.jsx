@@ -7,7 +7,7 @@ export default function TrackOrderScreen() {
 	return (
 		<SafeAreaView style={styles.safe}>
 			<View style={styles.container}>
-				<ScreenHeader title="Tracking Order" onBack={undefined} />
+				<ScreenHeader title="Tracking Order" onBack={undefined} right="none" />
 			</View>
 		</SafeAreaView>
 	);

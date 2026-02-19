@@ -5,8 +5,8 @@ export const styles = StyleSheet.create({
 
 	headerRow: {
 		paddingHorizontal: 16,
-		paddingTop: 10,
-		paddingBottom: 10,
+		paddingTop: 20,
+		paddingBottom: 20,
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "space-between",

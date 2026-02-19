@@ -4,6 +4,7 @@ import { useRoute, useNavigation } from "@react-navigation/native";
 import { styles } from "./styles";
 import PrimaryBtn from "../../components/ui/PrimaryBtn";
 import { Bell, ChevronLeft, Minus, Plus, Star } from "lucide-react-native";
+import ScreenHeader from "../../components/ui/ScreenHeader/ScreenHeader";
 
 const DUMMY = {
 	1: { name: "Ollie Baked Beef Dish Dry Dog Food, 5 lbs.", price: "₱199.00" },
@@ -31,9 +32,7 @@ export default function ProductDetailsScreen() {
 		<SafeAreaView style={styles.safe}>
 			<View style={styles.container}>
 				<View style={styles.topRow}>
-					<Pressable style={styles.iconBtn} onPress={() => navigation.goBack()}>
-						<ChevronLeft />
-					</Pressable>
+					<ScreenHeader right="none" />
 
 					<View style={{ flex: 1, alignItems: "center" }}>
 						<Text style={styles.deliver}>Deliver to</Text>
@@ -41,7 +40,7 @@ export default function ProductDetailsScreen() {
 					</View>
 
 					<View style={styles.iconBtn}>
-						<Bell fill="#391713" />
+						<Bell />
 					</View>
 				</View>
 

@@ -11,6 +11,7 @@ import { Bell, ChevronLeft, Star } from "lucide-react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./styles";
 import { DUMMY_ORDERS } from "../../data/dummyData";
+import ScreenHeader from "../../components/ui/ScreenHeader/ScreenHeader";
 
 export default function MyOrdersScreen() {
 	const navigation = useNavigation();
@@ -31,7 +32,7 @@ export default function MyOrdersScreen() {
 	return (
 		<SafeAreaView style={styles.safe}>
 			<View style={styles.headerRow}>
-				<Pressable style={styles.iconBtn} onPress={() => navigation.goBack()}>
+				{/**<Pressable style={styles.iconBtn} onPress={() => navigation.goBack()}>
 					<ChevronLeft size={18} color="#111827" />
 				</Pressable>
 
@@ -39,7 +40,9 @@ export default function MyOrdersScreen() {
 
 				<Pressable style={styles.iconBtn} onPress={() => {}}>
 					<Bell size={18} color="#111827" />
-				</Pressable>
+				</Pressable>*/}
+
+				<ScreenHeader title={undefined} onBack={undefined} right="none" />
 			</View>
 
 			<View style={styles.segmentWrap}>

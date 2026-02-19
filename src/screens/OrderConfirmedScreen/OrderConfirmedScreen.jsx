@@ -4,6 +4,7 @@ import { ChevronLeft } from "lucide-react-native";
 
 import { styles } from "./styles";
 import PrimaryBtn from "../../components/ui/PrimaryBtn";
+import ScreenHeader from "../../components/ui/ScreenHeader/ScreenHeader";
 
 export default function OrderConfirmed() {
 	const navigation = useNavigation();
@@ -11,13 +12,7 @@ export default function OrderConfirmed() {
 	return (
 		<SafeAreaView style={styles.safe}>
 			<View style={styles.headerRow}>
-				<Pressable style={styles.iconBtn} onPress={() => navigation.goBack()}>
-					<ChevronLeft size={18} color="#111827" />
-				</Pressable>
-
-				<Text style={styles.headerTitle}>Order Confirmed</Text>
-
-				<View style={{ width: 44 }} />
+				<ScreenHeader right="none" />
 			</View>
 
 			<View style={styles.container}>

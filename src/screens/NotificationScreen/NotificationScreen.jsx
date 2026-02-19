@@ -27,9 +27,8 @@ export default function NotificationsScreen() {
 
 	return (
 		<SafeAreaView style={styles.safe}>
-			<ScreenHeader title="Notifications Settings" onBack={undefined} />
-
 			<ScrollView contentContainerStyle={styles.container}>
+				<ScreenHeader title="Notifications Settings" onBack={undefined} />
 				<NotificationItem
 					label="General Notifications"
 					value={settings.general}

@@ -11,7 +11,8 @@ export const styles = StyleSheet.create({
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "space-between",
-		paddingHorizontal: 16,
+		paddingHorizontal: 20,
+		paddingVertical: 50,
 	},
 
 	iconBtn: {
