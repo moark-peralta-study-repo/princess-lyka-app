@@ -8,9 +8,13 @@ import SearchBar from "../../ui/SearchBar/SearchBar";
 import CategoryCard from "../../ui/CategoryCard/CategoryCard";
 import ProductCard from "../../ui/ProductCard/ProductCard";
 import BestSellingCard from "../../ui/BestSellingCard/BestSellingCard";
+import { useState } from "react";
+import FilterDrawer from "../FilterDrawer/FilterDrawer";
 
 export default function HomePage() {
 	const navigation = useNavigation();
+
+	const [isFilterOpen, setIsFilterOpen] = useState(false);
 
 	function emulateSearch() {
 		navigation.getParent()?.navigate("Search");
@@ -29,7 +33,9 @@ export default function HomePage() {
 				<SearchBar
 					mode="preview"
 					onPress={emulateSearch}
-					onFilterPress={() => {}}
+					onFilterPress={() => {
+						setIsFilterOpen(true);
+					}}
 				/>
 				<PromoCard />
 
@@ -69,10 +75,25 @@ export default function HomePage() {
 				</View>
 
 				<View style={styles.grid2}>
-					<BestSellingCard title="Medicine For Cats" price="₱15.79" />
-					<BestSellingCard title="Medicine For Dogs" price="₱9.50" />
+					<BestSellingCard
+						title="Medicine For Cats"
+						price="₱15.79"
+						onPress={() => navigation.navigate("ProductDetails")}
+					/>
+					<BestSellingCard
+						title="Medicine For Dogs"
+						price="₱9.50"
+						onPress={() => navigation.navigate("ProductDetails")}
+					/>
 				</View>
 			</ScrollView>
+
+			<FilterDrawer
+				visible={isFilterOpen}
+				onClose={() => setIsFilterOpen(false)}
+				heightPct={0.5}
+				title="Filter By"
+			/>
 		</SafeAreaView>
 	);
 }
